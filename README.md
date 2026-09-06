@@ -1,6 +1,6 @@
 # MindTrail AI - Journal & Reflections
 
-A user-authenticated journaling and reflective conversation web application built with **Google Gemini 3.6 Flash**, **Firebase Authentication (Google Identity)**, and **Cloud Firestore**, connected to Firebase Project **`mindtrail-ai-81af2`** (Project Number: `848027673607`) with custom Firestore Database ID **`ai-studio-08757021-c5f8-4096-8594-aefbe199731f`**.
+A user-authenticated journaling and reflective conversation web application built with **Google Gemini 3.6 Flash**, **Firebase Authentication (Google Identity)**, and **Cloud Firestore**, connected to Firebase Project **`mindtrail-ai-81af2`** (Project Number: `848027673607`) with custom Firestore Database ID **`ai-studio-mindtrailai-08757021-c5f8-4096-8594-aefbe199731f`**.
 
 ---
 
