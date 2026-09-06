@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --paper-bg: #F8F6F0;
+    --paper-card: #FFFDF8;
+    --ink-primary: #171817;
+    --ink-secondary: #686862;
+    --ink-muted: #8C8B83;
+    --border-subtle: #E8E5DE;
+    --accent-sage: #7C8B7A;
+    --accent-brass: #C5A45D;
+  }
+
+  html.dark {
+    --paper-bg: #141312;
+    --paper-card: #1B1A18;
+    --ink-primary: #F6F4EE;
+    --ink-secondary: #A3A199;
+    --ink-muted: #7A7872;
+    --border-subtle: #292825;
+    --accent-sage: #8FA08E;
+    --accent-brass: #D4B774;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--ink-primary);
+    background-color: var(--paper-bg);
+    transition: background-color 0.25s ease, color 0.25s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark body {
+    color: var(--ink-primary);
+    background-color: var(--paper-bg);
+  }
+}
+
+.font-serif-title {
+  font-family: 'Newsreader', Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Editorial notebook lines pattern */
+.bg-notebook-ruled {
+  background-image: linear-gradient(to bottom, transparent 95%, rgba(120, 115, 105, 0.08) 95%);
+  background-size: 100% 2.2rem;
+}
+
+html.dark {
+  color-scheme: dark;
+}

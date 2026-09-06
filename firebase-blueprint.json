@@ -1,0 +1,73 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile metadata and preferences",
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "type": "string",
+          "description": "User display name"
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "User avatar photo URL or data URI"
+        },
+        "themePreference": {
+          "type": "string",
+          "description": "Appearance preference: system, light, or dark"
+        },
+        "hasCompletedFirstVisit": {
+          "type": "boolean",
+          "description": "Whether the user has completed their initial dashboard session"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp of profile update"
+        }
+      }
+    },
+    "JournalEntry": {
+      "title": "JournalEntry",
+      "description": "User reflective journal entries and AI conversation threads",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The Firebase UID of the author"
+        },
+        "title": {
+          "type": "string",
+          "description": "Entry title or prompt topic"
+        },
+        "mood": {
+          "type": "string",
+          "description": "Emotional state tag"
+        },
+        "originalJournal": {
+          "type": "string",
+          "description": "User original journal reflection text"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation ISO timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last update ISO timestamp"
+        }
+      },
+      "required": ["userId", "originalJournal", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User root profile document"
+    },
+    "/users/{userId}/entries/{entryId}": {
+      "schema": "JournalEntry",
+      "description": "User personal reflections and journal entries"
+    }
+  }
+}

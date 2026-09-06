@@ -1,0 +1,6 @@
+{
+  "name": "Gemini Journal & Reflections",
+  "description": "AI-Powered Memory & Reflection Companion with user-isolated Cloud Firestore storage, private Gemini intelligence, reflective reading with Google Books, and interactive memory synthesis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
